@@ -8,16 +8,15 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         clearPage();
-        // menuPage();
+        menuPage();
     });
 });
 
 function clearPage() {
     const content = document.getElementById('content');
-    const imgs = document.querySelectorAll('img');
-
-    const headings = document.querySelectorAll('h3');
-    const paras = document.querySelectorAll('p');
+    const imgs = content.querySelectorAll('img');
+    const headings = content.querySelectorAll('h3');
+    const paras = content.querySelectorAll('p');
 
     const elementsToRemove = [...imgs, ...headings, ...paras];
 

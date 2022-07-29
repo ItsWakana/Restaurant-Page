@@ -16,7 +16,7 @@ export function mainPage() {
     const navBar = document.createElement('div');
     navBar.className = 'tabs';
 
-    for (let i=0; i<4; i++) {
+    for (let i=0; i<3; i++) {
         const navTitles = ['Home', 'Menu', 'Contact'];
         const button = document.createElement('button');
         button.textContent = navTitles[i];
