@@ -1,10 +1,10 @@
-import {mainPage} from './home';
+import {initialPageLoad} from './pageLoad';
 import {menuPage} from './menu';
+import {homePage} from './home';
 
-window.onload = mainPage();
+window.onload = initialPageLoad();
 
 const buttons = document.querySelectorAll('button');
-
 buttons[1].addEventListener('click', () => {
     clearPage();
     menuPage();
@@ -12,10 +12,13 @@ buttons[1].addEventListener('click', () => {
 
 buttons[0].addEventListener('click', () => {
     clearPage();
+    homePage();
 });
 
 function clearPage() {
+
     const content = document.getElementById('content');
+
     const imgs = content.querySelectorAll('img');
     const headings = content.querySelectorAll('h3');
     const paras = content.querySelectorAll('p');
