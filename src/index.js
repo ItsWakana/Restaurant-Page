@@ -1,10 +1,17 @@
 import {initialPageLoad} from './pageLoad';
 import {menuPage} from './menu';
 import {homePage} from './home';
+import {contactPage} from './contact';
 
 window.onload = initialPageLoad();
 
 const buttons = document.querySelectorAll('button');
+
+buttons[2].addEventListener('click', () => {
+    clearPage();
+    contactPage();
+});
+
 buttons[1].addEventListener('click', () => {
     clearPage();
     menuPage();
