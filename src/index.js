@@ -5,11 +5,13 @@ window.onload = mainPage();
 
 const buttons = document.querySelectorAll('button');
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        clearPage();
-        menuPage();
-    });
+buttons[1].addEventListener('click', () => {
+    clearPage();
+    menuPage();
+});
+
+buttons[0].addEventListener('click', () => {
+    clearPage();
 });
 
 function clearPage() {
