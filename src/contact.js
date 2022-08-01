@@ -16,7 +16,7 @@ export function contactPage() {
     nameInput.name = 'name'; nameInput.placeholder = 'John Doe';
 
     emailInput.type = 'email'; emailInput.id = 'email';
-    emailInput.name = 'email'; emailInput.placeholder = 'example@gmail.com';
+    emailInput.name = 'email'; emailInput.placeholder = 'example@example.com';
 
     messageBox.id = 'msg'; messageBox.name = 'msg';
     messageBox.placeholder = 'Enter your message here';

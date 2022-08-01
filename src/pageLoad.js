@@ -3,7 +3,7 @@ export function initialPageLoad() {
     const title = document.createElement('h2');
     title.textContent = 'Arnolds Amazing Recipes';
 
-    const mainImg = document.createElement('img');
+    const mainImg = new Image();
     mainImg.src = '../images/main.jpg';
     mainImg.className = 'main';
 

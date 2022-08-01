@@ -20,7 +20,11 @@ export function menuPage() {
     const item1Price = document.createElement('h3');
     item1Price.textContent = '£2';
 
-    firstItem.append(titleOne,sourdoughImage,sourdoughDesc,item1Price);
+    const addItem1ToCart = document.createElement('button');
+    addItem1ToCart.textContent = 'Add to cart';
+    addItem1ToCart.className = 'add-cart';
+
+    firstItem.append(titleOne,sourdoughImage,sourdoughDesc,item1Price,addItem1ToCart);
 
     const secondItem = document.createElement('div');
     secondItem.className = 'product';
@@ -39,10 +43,15 @@ export function menuPage() {
     const item2Price = document.createElement('h3');
     item2Price.textContent = '£2.30';
 
-    secondItem.append(titleTwo,farmhouseImage,farmhouseDesc,item2Price);
+    const addItem2ToCart = document.createElement('button');
+    addItem2ToCart.textContent = 'Add to cart';
+    addItem2ToCart.className = 'add-cart';
+
+    secondItem.append(titleTwo,farmhouseImage,farmhouseDesc,item2Price, addItem2ToCart);
 
     
     content.append(firstItem,secondItem);
+    content.classList.add('active');
 
 
 }
