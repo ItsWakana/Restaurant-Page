@@ -26,7 +26,7 @@ export function menuPage() {
     secondItem.className = 'product';
 
     const titleTwo = document.createElement('h3');
-    titleTwo.textContent = 'Farmhouse Loaf';
+    titleTwo.textContent = 'Signature Farmhouse Loaf';
 
     const farmhouseImage = new Image();
 

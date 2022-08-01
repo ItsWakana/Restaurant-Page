@@ -1,7 +1,11 @@
 export function contactPage() {
     const content = document.getElementById('content');
+
+    const contactBox = document.createElement('div');
+    contactBox.className = 'contact-us';
+
     const title = document.createElement('h3');
-    title.textContent = 'Contact';
+    title.textContent = 'Contact us';
 
     const form = document.createElement('form');
     const nameInput = document.createElement('input');
@@ -23,7 +27,8 @@ export function contactPage() {
     submit.textContent = 'Submit';
 
     form.append(nameInput,emailInput,messageBox,submit);
-    content.append(title,form);
 
+    contactBox.append(title, form)
+    content.append(contactBox);
 
 }

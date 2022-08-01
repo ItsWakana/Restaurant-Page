@@ -32,9 +32,11 @@ function clearPage() {
     const paras = content.querySelectorAll('p');
     const lists = content.querySelectorAll('ul');
     const forms = content.querySelectorAll('form');
+    const products = content.querySelectorAll('.product');
+    const contactForm = content.querySelectorAll('.contact-us');
 
     const elementsToRemove = [...imgs, ...headings, ...paras, ...lists,
-    ...subHeadings, ...forms];
+    ...subHeadings, ...forms, ...products, ...contactForm];
 
     elementsToRemove.forEach(element => element.remove());
 }

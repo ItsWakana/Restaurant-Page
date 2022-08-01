@@ -19,6 +19,7 @@ export function initialPageLoad() {
     for (let i=0; i<3; i++) {
         const navTitles = ['Home', 'Menu', 'Contact'];
         const button = document.createElement('button');
+        button.className = 'nav-item';
         button.textContent = navTitles[i];
         navBar.append(button);
     }
