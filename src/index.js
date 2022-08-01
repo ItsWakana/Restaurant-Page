@@ -7,19 +7,19 @@ window.onload = initialPageLoad();
 
 const buttons = document.querySelectorAll('button');
 
-buttons[2].addEventListener('click', () => {
-    clearPage();
-    contactPage();
-});
-
-buttons[1].addEventListener('click', () => {
-    clearPage();
-    menuPage();
-});
-
-buttons[0].addEventListener('click', () => {
-    clearPage();
-    homePage();
+buttons.forEach((button, i) => {
+    button.addEventListener('click', () => {
+        clearPage();
+        if (i == 0) {
+            homePage();
+        }
+        if (i == 1) {
+            menuPage();
+        } 
+        if (i == 2) {
+            contactPage();
+        }
+    });
 });
 
 function clearPage() {
@@ -28,9 +28,13 @@ function clearPage() {
 
     const imgs = content.querySelectorAll('img');
     const headings = content.querySelectorAll('h3');
+    const subHeadings = content.querySelectorAll('h4');
     const paras = content.querySelectorAll('p');
+    const lists = content.querySelectorAll('ul');
+    const forms = content.querySelectorAll('form');
 
-    const elementsToRemove = [...imgs, ...headings, ...paras];
+    const elementsToRemove = [...imgs, ...headings, ...paras, ...lists,
+    ...subHeadings, ...forms];
 
     elementsToRemove.forEach(element => element.remove());
 }

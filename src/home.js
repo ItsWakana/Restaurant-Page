@@ -1,6 +1,7 @@
 export function homePage() {
     const content = document.getElementById('content');
-    const mainImg = document.createElement('img');
+
+    const mainImg = new Image();
     mainImg.src = '../images/main.jpg';
     mainImg.className = 'main';
 
