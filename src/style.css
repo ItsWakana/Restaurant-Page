@@ -20,6 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 80%;
+    gap: 20px;
     /* border: solid 2px black; */
     text-align: center;
 }
@@ -50,6 +51,11 @@ h3 {
     border-radius: 10px;
 }
 
+.product {
+    background-color: rgb(235, 245, 245);
+    border-radius: 20px;
+}
+
 button.submit {
     width: 70px;
 
@@ -58,6 +64,7 @@ button.submit {
 .recipe-image {
     width: 70%;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 form {

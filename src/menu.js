@@ -1,42 +1,48 @@
 export function menuPage() {
     const content = document.getElementById('content');
-    const title = document.createElement('h3');
-    title.textContent = 'Sourdough Recipe';
-
-    const ingredientsTitle = document.createElement('h4');
-    ingredientsTitle.textContent = 'Ingredients:';
 
 
+    const firstItem = document.createElement('div');
+    firstItem.className = 'product';
+    
 
-    const ingredientList = document.createElement('ul');
-
-    const recipeSteps = document.createElement('ul');
+    const titleOne = document.createElement('h3');
+    titleOne.textContent = 'Special Sourdough';
 
     const sourdoughImage = new Image();
 
     sourdoughImage.src = '../images/sourdough.jpg';
     sourdoughImage.className = 'recipe-image';
 
-    content.append(title, sourdoughImage, ingredientsTitle, ingredientList, recipeSteps);
+    const sourdoughDesc = document.createElement('p');
+    sourdoughDesc.textContent = 'An wonderfully crafted artisan sourdough. Perfect as part of a ploughmans lunch.';
 
-    for(let i=0; i<5; i++) {
-        const ingredients = ['1 Onion', '2 Chicken Breasts', '2 garlic gloves',
-        '1tsp cumin', '1tsb chilli powder'];
-        const listItem = document.createElement('li');
-        listItem.textContent = ingredients[i];
-        ingredientList.append(listItem);
-    }
+    const item1Price = document.createElement('h3');
+    item1Price.textContent = '£2';
 
-    const stepOne = document.createElement('li');
-    stepOne.textContent = 'Blitz 1 quartered onion, 2 garlic cloves, a thumb-sized chunk of ginger and ½ red chilli together in a food processor until it becomes a coarse paste.'
+    firstItem.append(titleOne,sourdoughImage,sourdoughDesc,item1Price);
 
-    const stepTwo = document.createElement('li');
-    stepTwo.textContent = 'Heat 1 tbsp vegetable oil in a large saucepan and add the paste, fry for 5 mins, until softened. If it starts to stick to the pan at all, add a splash of water.';
+    const secondItem = document.createElement('div');
+    secondItem.className = 'product';
 
-    recipeSteps.append(stepOne,stepTwo);
+    const titleTwo = document.createElement('h3');
+    titleTwo.textContent = 'Farmhouse Loaf';
 
+    const farmhouseImage = new Image();
 
+    farmhouseImage.src = '../images/loaf.jpg';
+    farmhouseImage.className = 'recipe-image';
 
+    const farmhouseDesc = document.createElement('p');
+    farmhouseDesc.textContent = 'A full and crispy farmhouse loaf baked to perfection by our team of talented bakery chefs. Perfect for toast as well.';
+
+    const item2Price = document.createElement('h3');
+    item2Price.textContent = '£2.30';
+
+    secondItem.append(titleTwo,farmhouseImage,farmhouseDesc,item2Price);
+
+    
+    content.append(firstItem,secondItem);
 
 
 }
