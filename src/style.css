@@ -6,8 +6,15 @@
     margin: 0;
 }
 
+:root {
+    --element-bg-color: #9FC088;
+    --btn-hover-clr: #9FC088;
+    --background-clr: white;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-clr);
     height: 100vh;
     font-size: 17px;
     display: flex;
@@ -42,9 +49,13 @@ h3 {
 }
 
 .tabs {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
+.nav-item {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
 .nav-item, .submit, .add-cart {
     background: none;
     border: none;
@@ -54,15 +65,15 @@ h3 {
 
 button.add-cart {
     border: solid 2px black;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 3px 3px;
 }
 
 .nav-item:hover {
-    background-color: rgb(235, 245, 245);
-    border-radius: 20px;
     cursor: pointer;
 }
+
 .main {
     width: 100%;
     border-radius: 10px;
@@ -70,14 +81,14 @@ button.add-cart {
 
 .product,
 .contact-us {
-    background-color: rgb(235, 245, 245);
-    border-radius: 20px;
-    margin-bottom: 20px;
+    background-color: var(--element-bg-color);
+    border-radius: 5px;
+    margin-bottom: 35px;
 }
 
 .product {
     min-width: 300px;
-    width: 50%;
+    width: 80%;
     padding-bottom: 20px;
 }
 
@@ -93,9 +104,14 @@ button.submit {
 
 }
 
+button.active {
+    background-color: var(--btn-hover-clr);
+    box-shadow: 5px 5px 6px -4px;
+}
+
 .recipe-image {
     min-width: 200px;
-    width: 50%;
+    width: 40%;
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 10px 10px;

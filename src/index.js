@@ -22,6 +22,27 @@ buttons.forEach((button, i) => {
     });
 });
 
+buttons[0].addEventListener('click', () => {
+    buttons[0].classList.add('active');
+    buttons[1].classList.remove('active');
+    buttons[2].classList.remove('active');
+
+});
+
+buttons[1].addEventListener('click', () => {
+    buttons[1].classList.add('active');
+    buttons[0].classList.remove('active');
+    buttons[2].classList.remove('active');
+
+});
+
+buttons[2].addEventListener('click', () => {
+    buttons[2].classList.add('active');
+    buttons[1].classList.remove('active');
+    buttons[0].classList.remove('active');
+
+});
+
 function clearPage() {
 
     const content = document.getElementById('content');
