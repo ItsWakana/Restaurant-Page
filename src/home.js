@@ -1,15 +1,26 @@
 export function homePage() {
     const content = document.getElementById('content');
 
-    const mainImg = new Image();
-    mainImg.src = '../images/main.jpg';
-    mainImg.className = 'main';
+    const homeBanner = document.createElement('div');
+    homeBanner.className = 'product';
+
+    const subAndInfoContainer = document.createElement('div');
+    subAndInfoContainer.className = 'title-desc';
+
+    const main = new Image();
+
+    main.src = '../images/main.jpg';
+    main.className = 'recipe-image';
 
     const subHeading = document.createElement('h3');
-    subHeading.textContent = 'Adventures in Spice';
+    subHeading.textContent = 'Yeastful Adventures';
 
     const info = document.createElement('p');
-    info.textContent = "Here at Arnold's Amazing Recipes I strive to provide you with quick and affordable recipes that taste as good as they look! Check out some of my recipes.";
+    info.textContent = "Here at Loaf Kings we provide you with beautifully crated artisan bread that tastes as good as it looks! Browse our available loaves on the menu page!";
 
-    content.append(mainImg, subHeading, info);
+
+    subAndInfoContainer.append(subHeading, info);
+
+    homeBanner.append(subAndInfoContainer, main);
+    content.append(homeBanner);
 }

@@ -13,10 +13,10 @@ export function contactPage() {
     const messageBox = document.createElement('textarea');
 
     nameInput.type = 'text'; nameInput.id = 'name';
-    nameInput.name = 'name'; nameInput.placeholder = 'John Doe';
+    nameInput.name = 'name'; nameInput.placeholder = 'Full name';
 
     emailInput.type = 'email'; emailInput.id = 'email';
-    emailInput.name = 'email'; emailInput.placeholder = 'example@example.com';
+    emailInput.name = 'email'; emailInput.placeholder = 'Email address';
 
     messageBox.id = 'msg'; messageBox.name = 'msg';
     messageBox.placeholder = 'Enter your message here';

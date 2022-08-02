@@ -1,17 +1,25 @@
 export function initialPageLoad() {
+
     const content = document.getElementById('content');
     const title = document.createElement('h2');
-    title.textContent = 'Arnolds Amazing Recipes';
+    title.textContent = 'The Loaf Kings';
 
-    const mainImg = new Image();
-    mainImg.src = '../images/main.jpg';
-    mainImg.className = 'main';
+    const homeBanner = document.createElement('div');
+    homeBanner.className = 'product';
+
+    const subAndInfoContainer = document.createElement('div');
+    subAndInfoContainer.className = 'title-desc';
+
+    const main = new Image();
+
+    main.src = '../images/main.jpg';
+    main.className = 'recipe-image';
 
     const subHeading = document.createElement('h3');
-    subHeading.textContent = 'Adventures in Spice';
+    subHeading.textContent = 'Yeastful Adventures';
 
     const info = document.createElement('p');
-    info.textContent = "Here at Arnold's Amazing Recipes I strive to provide you with quick and affordable recipes that taste as good as they look! Check out some of my recipes.";
+    info.textContent = "Here at Loaf Kings we provide you with beautifully crated artisan bread that tastes as good as it looks! Browse our available loaves on the menu page!";
 
     const navBar = document.createElement('div');
     navBar.className = 'tabs';
@@ -23,12 +31,11 @@ export function initialPageLoad() {
         button.textContent = navTitles[i];
         navBar.append(button);
     }
+    subAndInfoContainer.append(subHeading, info);
 
-    content.append(title, navBar, mainImg, 
-        subHeading, info);
+    homeBanner.append(subAndInfoContainer,main);
+    content.append(title, navBar, homeBanner);
 
-
-
-
-
+    const buttons = document.querySelectorAll('button');
+    buttons[0].classList.add('active');
 }

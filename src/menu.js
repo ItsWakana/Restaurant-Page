@@ -9,6 +9,9 @@ export function menuPage() {
     const titleOne = document.createElement('h3');
     titleOne.textContent = 'Special Sourdough';
 
+    const menuCartOne = document.createElement('div');
+    menuCartOne.className = 'title-desc';
+
     const sourdoughImage = new Image();
 
     sourdoughImage.src = '../images/sourdough.jpg';
@@ -24,13 +27,17 @@ export function menuPage() {
     addItem1ToCart.textContent = 'Add to cart';
     addItem1ToCart.className = 'add-cart';
 
-    firstItem.append(titleOne,sourdoughImage,sourdoughDesc,item1Price,addItem1ToCart);
+    menuCartOne.append(titleOne,sourdoughDesc,item1Price,addItem1ToCart);
+    firstItem.append(menuCartOne,sourdoughImage);
 
     const secondItem = document.createElement('div');
     secondItem.className = 'product';
 
     const titleTwo = document.createElement('h3');
     titleTwo.textContent = 'Signature Farmhouse Loaf';
+
+    const menuCartTwo = document.createElement('div');
+    menuCartTwo.className = 'title-desc';
 
     const farmhouseImage = new Image();
 
@@ -47,11 +54,9 @@ export function menuPage() {
     addItem2ToCart.textContent = 'Add to cart';
     addItem2ToCart.className = 'add-cart';
 
-    secondItem.append(titleTwo,farmhouseImage,farmhouseDesc,item2Price, addItem2ToCart);
+    menuCartTwo.append(titleTwo,farmhouseDesc,item2Price,addItem2ToCart);
+    secondItem.append(menuCartTwo,farmhouseImage);
 
     
     content.append(firstItem,secondItem);
-    content.classList.add('active');
-
-
 }

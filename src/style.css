@@ -48,10 +48,6 @@ h3 {
     padding-bottom: 20px;
 }
 
-.tabs {
-    /* margin-bottom: 15px; */
-}
-
 .nav-item {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -63,11 +59,12 @@ h3 {
     font-weight: bold;
 }
 
-button.add-cart {
+button.add-cart, button.submit {
     border: solid 2px black;
     background-color: white;
     border-radius: 5px;
     box-shadow: 3px 3px;
+    width: 100px;
 }
 
 .nav-item:hover {
@@ -82,14 +79,17 @@ button.add-cart {
 .product,
 .contact-us {
     background-color: var(--element-bg-color);
-    border-radius: 5px;
+    border-radius: 7px;
     margin-bottom: 35px;
 }
 
 .product {
+    display: flex;
     min-width: 300px;
     width: 80%;
     padding-bottom: 20px;
+    padding-top: 50px;
+    justify-content: center;
 }
 
 .contact-us {
@@ -120,5 +120,39 @@ button.active {
 form {
     display: flex;
     flex-direction: column;
+    min-height: 400px;
     gap: 25px;
 }
+
+.title-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    text-align: start;
+}
+
+@media all and (max-width: 500px) {
+
+    .product {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 30px;
+        justify-content: center;
+    }
+    .recipe-image {
+        max-width: 200px;
+        max-height: 120px;
+        margin-top: 30px;
+        width: auto;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .title-desc {
+        flex-direction: column;
+        width: 70%;
+    }
+}
+
+
