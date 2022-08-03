@@ -5,7 +5,7 @@ export function contactPage() {
     contactBox.className = 'contact-us';
 
     const title = document.createElement('h3');
-    title.textContent = 'Contact us';
+    title.textContent = 'Contact Us';
 
     const form = document.createElement('form');
     const nameInput = document.createElement('input');

@@ -24,13 +24,21 @@ export function initialPageLoad() {
     const navBar = document.createElement('div');
     navBar.className = 'tabs';
 
+    const leftTabs = document.createElement('div');
+    leftTabs.className = 'left-tabs';
+
     for (let i=0; i<3; i++) {
         const navTitles = ['Home', 'Menu', 'Contact'];
         const button = document.createElement('button');
         button.className = 'nav-item';
         button.textContent = navTitles[i];
-        navBar.append(button);
+        leftTabs.append(button);
     }
+
+    const basketTab = document.createElement('button');
+    basketTab.className = 'nav-item';
+    basketTab.textContent = 'Basket';
+    navBar.append(leftTabs,basketTab);
     subAndInfoContainer.append(subHeading, info);
 
     homeBanner.append(subAndInfoContainer,main);

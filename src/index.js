@@ -2,6 +2,7 @@ import {initialPageLoad} from './pageLoad';
 import {menuPage} from './menu';
 import {homePage} from './home';
 import {contactPage} from './contact';
+import {basketPage} from './basket';
 
 window.onload = initialPageLoad();
 
@@ -19,6 +20,9 @@ buttons.forEach((button, i) => {
         if (i == 2) {
             contactPage();
         }
+        if (i == 3) {
+            basketPage();
+        }
     });
 });
 
@@ -26,21 +30,29 @@ buttons[0].addEventListener('click', () => {
     buttons[0].classList.add('active');
     buttons[1].classList.remove('active');
     buttons[2].classList.remove('active');
-
+    buttons[3].classList.remove('active');
 });
 
 buttons[1].addEventListener('click', () => {
     buttons[1].classList.add('active');
     buttons[0].classList.remove('active');
     buttons[2].classList.remove('active');
-
+    buttons[3].classList.remove('active');
 });
 
 buttons[2].addEventListener('click', () => {
     buttons[2].classList.add('active');
     buttons[1].classList.remove('active');
     buttons[0].classList.remove('active');
+    buttons[3].classList.remove('active');
 
+});
+
+buttons[3].addEventListener('click', () => {
+    buttons[3].classList.add('active');
+    buttons[0].classList.remove('active');
+    buttons[1].classList.remove('active');
+    buttons[2].classList.remove('active');
 });
 
 function clearPage() {
