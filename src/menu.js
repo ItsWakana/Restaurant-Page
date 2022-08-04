@@ -1,3 +1,6 @@
+import productOne from './images/sourdough.jpg';
+import productTwo from './images/loaf.jpg';
+
 export function menuPage() {
     const content = document.getElementById('content');
 
@@ -14,7 +17,7 @@ export function menuPage() {
 
     const sourdoughImage = new Image();
 
-    sourdoughImage.src = '../images/sourdough.jpg';
+    sourdoughImage.src = productOne;
     sourdoughImage.className = 'recipe-image';
 
     const sourdoughDesc = document.createElement('p');
@@ -41,7 +44,7 @@ export function menuPage() {
 
     const farmhouseImage = new Image();
 
-    farmhouseImage.src = '../images/loaf.jpg';
+    farmhouseImage.src = productTwo;
     farmhouseImage.className = 'recipe-image';
 
     const farmhouseDesc = document.createElement('p');

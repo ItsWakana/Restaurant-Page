@@ -1,3 +1,5 @@
+import mainImage from './images/main.jpg';
+
 export function initialPageLoad() {
 
     const content = document.getElementById('content');
@@ -12,7 +14,7 @@ export function initialPageLoad() {
 
     const main = new Image();
 
-    main.src = '../images/main.jpg';
+    main.src = mainImage;
     main.className = 'recipe-image';
 
     const subHeading = document.createElement('h3');
