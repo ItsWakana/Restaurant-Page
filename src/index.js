@@ -4,6 +4,8 @@ import {homePage} from './home';
 import {contactPage} from './contact';
 import {basketPage} from './basket';
 
+import "./style.css";
+
 window.onload = initialPageLoad();
 
 const buttons = document.querySelectorAll('button');
