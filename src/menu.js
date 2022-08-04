@@ -1,5 +1,5 @@
-import productOne from './images/sourdough.jpg';
-import productTwo from './images/loaf.jpg';
+import productOne from './assets/sourdough.jpg';
+import productTwo from './assets/loaf.jpg';
 
 export function menuPage() {
     const content = document.getElementById('content');

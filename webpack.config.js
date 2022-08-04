@@ -6,6 +6,7 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: '[name][ext]',
     },
     devtool: 'inline-source-map',
     module: {
@@ -15,7 +16,7 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.jpg/,
+                test: /\.(jpg|png|jpeg)$/i,
                 type: 'asset/resource'
             }
         ]

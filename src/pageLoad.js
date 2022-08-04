@@ -1,4 +1,4 @@
-import mainImage from './images/main.jpg';
+import mainImage from './assets/main.jpg';
 
 export function initialPageLoad() {
 
